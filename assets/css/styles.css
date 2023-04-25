@@ -1,0 +1,154 @@
+:root {
+	--ff-primary: basic-sans, sans-serif;
+	--clr-primary: #ee6352;
+	--clr-body: #ddd;
+	--clr-bg: #eee;
+	--spacer: 1rem;
+}
+
+*,
+*::before,
+*::after {
+	box-sizing: border-box;
+}
+
+h1,
+h2,
+p {
+	margin: 0;
+}
+
+body {
+	background-color: var(--clr-body);
+}
+
+ul li {
+	list-style-type: none
+}
+
+.flow>*+* {
+	margin-top: var(--flow-scapce, var(--spacer))
+}
+
+.content {
+	background-color: var(--clr-bg);
+	padding: 1rem;
+	margin: 1rem;
+}
+
+.content-sidebar {
+	display: block;
+}
+
+.col {
+	padding: 0.5em;
+}
+
+.col form {
+	margin-bottom: 1rem;
+}
+
+.form-class-budget {
+	background-color: rgba(60, 179, 113, 0.1);
+	border: 1px solid rgba(60, 179, 113, 0.9);
+	border-radius: 4px;
+	display: flex;
+	flex-direction: column;
+	padding: 1%;
+}
+
+.form-class-budget input,
+.form-class-budget input:hover,
+.form-class-budget input:focus {
+	background-color: rgba(60, 179, 113, 0.1);
+	color: rgba(60, 179, 113, 1);
+	border: 1px solid rgba(60, 179, 113, 0.9);
+}
+
+.form-class-budget label {
+	color: rgba(60, 179, 113, 1);
+}
+
+.form-class-budget .btn {
+	color: rgba(60, 179, 113, 1);
+	border: 1px solid rgba(60, 179, 113, 0.9);
+	width: 30%;
+}
+
+.form-class-budget .btn:hover {
+	color: white;
+	background-color: rgba(60, 179, 113, 1);
+}
+
+/* EXPENSES */
+.form-class-expenses {
+	background-color: rgba(255, 0, 0, 0.1);
+	border: 1px solid rgba(255, 0, 0, 0.9);
+	border-radius: 4px;
+	display: flex;
+	flex-direction: column;
+	padding: 1%;
+}
+
+.form-class-expenses input,
+.form-class-expenses input:hover,
+.form-class-expenses input:focus {
+	background-color: rgba(255, 0, 0, 0.1);
+	color: rgba(255, 0, 0, 1);
+	border: 1px solid rgba(255, 0, 0, 0.9);
+}
+
+.form-class-expenses label {
+	color: rgba(255, 0, 0, 1);
+}
+
+.form-class-expenses .btn {
+	color: rgba(255, 0, 0, 1);
+	border: 1px solid rgba(255, 0, 0, 0.9);
+	width: 35%;
+}
+
+.form-class-expenses .btn:hover {
+	color: white;
+	background-color: rgba(255, 0, 0, 0.1);
+}
+
+.row {
+	display: flex;
+}
+
+.space {
+	margin-bottom: 100px;
+}
+
+hr {
+	border: 1px solid black;
+}
+
+.list {
+	display: flex;
+}
+
+.item {
+	margin-left: 1em;
+}
+
+@media (min-width: 785px) {
+	.content-sidebar {
+		display: flex;
+		flex-wrap: wrap;
+	}
+
+	.content-sidebar>*:nth-child(1) {
+		flex: 1 1 40%;
+		max-width: 3pch;
+	}
+
+	.content-sidebar>*:nth-child(2) {
+		flex: 1 1 60%;
+	}
+
+	.form-class-expenses .btn {
+		width: 45%;
+	}
+}
